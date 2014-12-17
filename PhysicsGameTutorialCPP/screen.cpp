@@ -1,10 +1,9 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
-//  screen.cpp
-//  PhysicsGameTutorialCPP
+// ~ By Wilson - 'screen.cpp'
 //
-//  Created by Wilson Koder on 17/12/14.
-//  Copyright (c) 2014 WilsonKoder. All rights reserved.
-//
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 #include "screen.h"
 #include <iostream>

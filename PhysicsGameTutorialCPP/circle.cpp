@@ -1,10 +1,8 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
-//  circle.cpp
-//  PhysicsGameTutorialCPP
+// ~ By Wilson - 'circle.cpp'
 //
-//  Created by Wilson Koder on 17/12/14.
-//  Copyright (c) 2014 WilsonKoder. All rights reserved.
-//
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #include "circle.h"
 #include <SDL2_image/SDL_image.h>
@@ -52,7 +50,7 @@ void Circle::drawCircle(cpVect pos, cpVect rot, SDL_Texture* ballTexture, SDL_Re
     destRect.y = pos.y;
     
     
-    SDL_RenderCopyEx(renderer, ballTexture, &srcRect, &destRect, rot.y, 0, SDL_FLIP_NONE);
+    SDL_RenderCopyEx(renderer, ballTexture, &srcRect, &destRect, int(rot.x), 0, SDL_FLIP_NONE);
     //SDL_RenderCopy(renderer, ballTexture, &srcRect, &destRect);
 }
 

@@ -1,3 +1,9 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ~ By Wilson - 'circle.h'
+//
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 #pragma once
 
 #include <chipmunk/chipmunk.h>

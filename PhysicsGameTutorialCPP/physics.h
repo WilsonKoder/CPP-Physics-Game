@@ -1,3 +1,9 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//
+// ~ By Wilson - 'physics.h'
+//
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 #pragma once
 
 #include <chipmunk/chipmunk.h>

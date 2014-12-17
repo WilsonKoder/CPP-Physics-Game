@@ -1,36 +1,34 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
-//  main.cpp
-//  PhysicsGameTutorialCPP
+// ~ By Wilson - 'main.cpp'
 //
-//  Created by Wilson Koder on 17/12/14.
-//  Copyright (c) 2014 WilsonKoder. All rights reserved.
-//
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// STL
 
 #include <iostream>
 #include <vector>
 
-#include <chipmunk/chipmunk.h>
-
-#include <SDL2/SDL.h>
-#include <SDL2_image/SDL_image.h>
+// CUSTOM FILES
 
 #include "circle.h"
 #include "physics.h"
 #include "screen.h"
+#include "input.h"
 
-std::vector<Circle> circles;
+// No global variables! Good C++.
+
 
 int main(int argc, const char * argv[]) {
     
-    
-    // insert code here...
     Screen window(800, 600);
     Physics physics;
+    Input input;
+    
     cpSpace space = physics.createPhysicsSpace();
-    
+    std::vector<Circle> circles;
+
     SDL_Surface *screen = SDL_GetWindowSurface(window.window);
-    
-    bool gameIsRunning = true;
     
     SDL_SetRenderDrawColor(window.renderer, 255, 255, 255, 255);
     SDL_Texture* ballTexture = Circle::initCircle(window.renderer);
@@ -48,53 +46,11 @@ int main(int argc, const char * argv[]) {
     floorDestRect.y = 515;
     floorDestRect.x = 0;
     
-    while (gameIsRunning)
+    while (input.isRunning())
     {
         SDL_RenderClear(window.renderer);
 
-        SDL_Event e;
-        while(SDL_PollEvent(&e))
-        {
-            switch (e.type) {
-                case SDL_QUIT:
-                {
-                    gameIsRunning = false;
-                    break;
-                }
-                case SDL_KEYDOWN:
-                {
-                    switch (e.key.keysym.sym) {
-                        case SDLK_c:
-                            std::cout << "clear!" << std::endl;
-                            //for(auto &circle : circles)
-                            //{
-                            //    cpBodyFree(circle.ballShape->body);
-                            //    cpShapeFree(circle.ballShape);
-                            //}
-                            std::cout << "could not clear, current clearing causes crash due to EXC_BAD_ACCESS." << std::endl;
-                            break;
-                        default:
-                            break;
-                    }
-                }
-                case SDL_MOUSEBUTTONDOWN:
-                {
-                    int x, y;
-                    SDL_GetMouseState(&x, &y);
-                    cpVect pos = cpv(x, y);
-                    Circle* newTempCircle = new Circle();
-                    newTempCircle->initCircle(window.renderer);
-                    cpShape newCircle = newTempCircle->createCircle(15.0f, &space, pos);
-                    circles.insert(circles.end(), *newTempCircle);
-                    break;
-                }
-                default:
-                {
-                    break;
-                }
-                
-            }
-        }
+        input.handleEvents(window, &circles, space);
         
         for(auto &circle : circles)
         {
@@ -112,5 +68,4 @@ int main(int argc, const char * argv[]) {
     
     return 0;
 }
-
 

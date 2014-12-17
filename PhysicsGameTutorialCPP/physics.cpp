@@ -1,10 +1,9 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //
-//  physics.cpp
-//  PhysicsGameTutorialCPP
+// ~ By Wilson - 'physics.cpp'
 //
-//  Created by Wilson Koder on 17/12/14.
-//  Copyright (c) 2014 WilsonKoder. All rights reserved.
-//
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 #include "physics.h"
 
