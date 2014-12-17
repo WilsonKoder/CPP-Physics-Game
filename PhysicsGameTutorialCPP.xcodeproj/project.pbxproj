@@ -1,0 +1,302 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FD99579C1A415A4E00ABDEB7 /* screen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD99579A1A415A4E00ABDEB7 /* screen.cpp */; };
+		FD99579F1A415B6C00ABDEB7 /* physics.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD99579D1A415B6C00ABDEB7 /* physics.cpp */; };
+		FDD1FC131A41295D00F5EE0B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDD1FC121A41295D00F5EE0B /* main.cpp */; };
+		FDD1FC1A1A412D0E00F5EE0B /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD1FC191A412D0E00F5EE0B /* SDL2.framework */; };
+		FDD1FC201A4136CD00F5EE0B /* circle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDD1FC1E1A4136CD00F5EE0B /* circle.cpp */; };
+		FDD1FC221A4137FB00F5EE0B /* libChipmunk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD1FC211A4137FB00F5EE0B /* libChipmunk.a */; };
+		FDD1FC241A4139E300F5EE0B /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD1FC231A4139E300F5EE0B /* SDL2_image.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FDD1FC0D1A41295D00F5EE0B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FD99579A1A415A4E00ABDEB7 /* screen.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = screen.cpp; sourceTree = "<group>"; };
+		FD99579B1A415A4E00ABDEB7 /* screen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = screen.h; sourceTree = "<group>"; };
+		FD99579D1A415B6C00ABDEB7 /* physics.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = physics.cpp; sourceTree = "<group>"; };
+		FD99579E1A415B6C00ABDEB7 /* physics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = physics.h; sourceTree = "<group>"; };
+		FDD1FC0F1A41295D00F5EE0B /* PhysicsGameTutorialCPP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PhysicsGameTutorialCPP; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDD1FC121A41295D00F5EE0B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FDD1FC191A412D0E00F5EE0B /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		FDD1FC1E1A4136CD00F5EE0B /* circle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = circle.cpp; sourceTree = "<group>"; };
+		FDD1FC1F1A4136CD00F5EE0B /* circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = circle.h; sourceTree = "<group>"; };
+		FDD1FC211A4137FB00F5EE0B /* libChipmunk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libChipmunk.a; path = ../../../Frameworks/libChipmunk.a; sourceTree = "<group>"; };
+		FDD1FC231A4139E300F5EE0B /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2_image.framework; path = ../../../Frameworks/SDL2_image.framework; sourceTree = "<group>"; };
+		FDD1FC251A413A6300F5EE0B /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		FDD1FC261A41439E00F5EE0B /* floor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = floor.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDD1FC0C1A41295D00F5EE0B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDD1FC241A4139E300F5EE0B /* SDL2_image.framework in Frameworks */,
+				FDD1FC221A4137FB00F5EE0B /* libChipmunk.a in Frameworks */,
+				FDD1FC1A1A412D0E00F5EE0B /* SDL2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FDD1FC061A41295D00F5EE0B = {
+			isa = PBXGroup;
+			children = (
+				FDD1FC231A4139E300F5EE0B /* SDL2_image.framework */,
+				FDD1FC211A4137FB00F5EE0B /* libChipmunk.a */,
+				FDD1FC191A412D0E00F5EE0B /* SDL2.framework */,
+				FDD1FC111A41295D00F5EE0B /* PhysicsGameTutorialCPP */,
+				FDD1FC101A41295D00F5EE0B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FDD1FC101A41295D00F5EE0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDD1FC0F1A41295D00F5EE0B /* PhysicsGameTutorialCPP */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDD1FC111A41295D00F5EE0B /* PhysicsGameTutorialCPP */ = {
+			isa = PBXGroup;
+			children = (
+				FDD1FC261A41439E00F5EE0B /* floor.png */,
+				FDD1FC251A413A6300F5EE0B /* ball.png */,
+				FDD1FC121A41295D00F5EE0B /* main.cpp */,
+				FD99579D1A415B6C00ABDEB7 /* physics.cpp */,
+				FD99579E1A415B6C00ABDEB7 /* physics.h */,
+				FD99579A1A415A4E00ABDEB7 /* screen.cpp */,
+				FD99579B1A415A4E00ABDEB7 /* screen.h */,
+				FDD1FC1E1A4136CD00F5EE0B /* circle.cpp */,
+				FDD1FC1F1A4136CD00F5EE0B /* circle.h */,
+			);
+			path = PhysicsGameTutorialCPP;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDD1FC0E1A41295D00F5EE0B /* PhysicsGameTutorialCPP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDD1FC161A41295D00F5EE0B /* Build configuration list for PBXNativeTarget "PhysicsGameTutorialCPP" */;
+			buildPhases = (
+				FDD1FC0B1A41295D00F5EE0B /* Sources */,
+				FDD1FC0C1A41295D00F5EE0B /* Frameworks */,
+				FDD1FC0D1A41295D00F5EE0B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhysicsGameTutorialCPP;
+			productName = PhysicsGameTutorialCPP;
+			productReference = FDD1FC0F1A41295D00F5EE0B /* PhysicsGameTutorialCPP */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDD1FC071A41295D00F5EE0B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = WilsonKoder;
+				TargetAttributes = {
+					FDD1FC0E1A41295D00F5EE0B = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
+			};
+			buildConfigurationList = FDD1FC0A1A41295D00F5EE0B /* Build configuration list for PBXProject "PhysicsGameTutorialCPP" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FDD1FC061A41295D00F5EE0B;
+			productRefGroup = FDD1FC101A41295D00F5EE0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDD1FC0E1A41295D00F5EE0B /* PhysicsGameTutorialCPP */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDD1FC0B1A41295D00F5EE0B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDD1FC131A41295D00F5EE0B /* main.cpp in Sources */,
+				FD99579C1A415A4E00ABDEB7 /* screen.cpp in Sources */,
+				FDD1FC201A4136CD00F5EE0B /* circle.cpp in Sources */,
+				FD99579F1A415B6C00ABDEB7 /* physics.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FDD1FC141A41295D00F5EE0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FDD1FC151A41295D00F5EE0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FDD1FC171A41295D00F5EE0B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/WilsonKoder/Desktop/Frameworks,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Users/WilsonKoder/Desktop/Frameworks/Chipmunk-6.2.1/include/",
+					"/Users/WilsonKoder/Desktop/Frameworks/SDL2_gfx-1.0.1",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/WilsonKoder/Desktop/Frameworks,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FDD1FC181A41295D00F5EE0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/WilsonKoder/Desktop/Frameworks,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Users/WilsonKoder/Desktop/Frameworks/Chipmunk-6.2.1/include/",
+					"/Users/WilsonKoder/Desktop/Frameworks/SDL2_gfx-1.0.1",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/WilsonKoder/Desktop/Frameworks,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDD1FC0A1A41295D00F5EE0B /* Build configuration list for PBXProject "PhysicsGameTutorialCPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDD1FC141A41295D00F5EE0B /* Debug */,
+				FDD1FC151A41295D00F5EE0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDD1FC161A41295D00F5EE0B /* Build configuration list for PBXNativeTarget "PhysicsGameTutorialCPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDD1FC171A41295D00F5EE0B /* Debug */,
+				FDD1FC181A41295D00F5EE0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FDD1FC071A41295D00F5EE0B /* Project object */;
+}
