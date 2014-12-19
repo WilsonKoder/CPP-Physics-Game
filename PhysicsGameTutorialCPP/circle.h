@@ -15,7 +15,7 @@ public:
     Circle();
     cpShape createCircle(float radius, cpSpace *space, cpVect pos);
     static SDL_Texture* initCircle(SDL_Renderer* renderer);
-    static void drawCircle(cpVect pos, cpVect rot, SDL_Texture* ballTexture, SDL_Renderer* renderer);
+    static void drawCircle(cpVect pos, cpFloat rot, SDL_Texture* ballTexture, SDL_Renderer* renderer);
     cpVect getCirclePos();
     cpShape* ballShape;
 };

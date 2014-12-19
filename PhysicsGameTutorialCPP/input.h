@@ -13,7 +13,7 @@
 
 class Input {
 public:
-    void handleEvents(Screen window, std::vector<Circle> *circles, cpSpace space);
+    void handleEvents(Screen window, std::vector<Circle> *circles, cpSpace space, int *radius, int *gravity, int *wind);
     bool isRunning();
 private:
     bool running = true;

@@ -21,7 +21,7 @@
 
 int main(int argc, const char * argv[]) {
     
-    Screen window(800, 600);
+    Screen window(800, 600, "Wilson Koder C++ Physics Tutorial!");
     Physics physics;
     Input input;
     
@@ -46,16 +46,24 @@ int main(int argc, const char * argv[]) {
     floorDestRect.y = 515;
     floorDestRect.x = 0;
     
+    int rad = 14;
+    
+    int gravity = 900;
+    int wind = 0;
+    
     while (input.isRunning())
     {
         SDL_RenderClear(window.renderer);
 
-        input.handleEvents(window, &circles, space);
+        input.handleEvents(window, &circles, space, &rad, &gravity, &wind);
         
         for(auto &circle : circles)
         {
             cpShape* shape = circle.ballShape;
-            Circle::drawCircle(circle.getCirclePos(), shape->body->rot, ballTexture, window.renderer);
+            cpBody* body = cpShapeGetBody(shape);
+            cpFloat angle = cpBodyGetAngle(body) * 40;
+            cpVect rot = cpBodyGetRot(body);
+            Circle::drawCircle(circle.getCirclePos(), angle, ballTexture, window.renderer);
         }
         
         SDL_RenderCopy(window.renderer, floorTexture, &floorSrcRect, &floorDestRect);
@@ -63,7 +71,7 @@ int main(int argc, const char * argv[]) {
         cpSpaceStep(&space, (1.0/60.0));
         
         SDL_RenderPresent(window.renderer);
-
+        
     }
     
     return 0;
