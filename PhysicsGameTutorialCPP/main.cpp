@@ -16,8 +16,7 @@
 #include "screen.h"
 #include "input.h"
 
-// No global variables! Good C++.
-
+using std::vector;
 
 int main(int argc, const char * argv[]) {
     
@@ -26,7 +25,7 @@ int main(int argc, const char * argv[]) {
     Input input;
     
     cpSpace space = physics.createPhysicsSpace();
-    std::vector<Circle> circles;
+    vector<Circle> circles;
 
     SDL_Surface *screen = SDL_GetWindowSurface(window.window);
     
