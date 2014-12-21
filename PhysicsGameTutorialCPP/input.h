@@ -17,4 +17,6 @@ public:
     bool isRunning();
 private:
     bool running = true;
+    bool mouseHold = false;
+    bool mouseDown = false;
 };

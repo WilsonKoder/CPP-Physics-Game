@@ -35,24 +35,55 @@ void Input::handleEvents(Screen window, std::vector<Circle> *circles, cpSpace sp
                     gravity += 100;
                     cpSpaceSetGravity(&space, cpv(*wind, *gravity));
                 }
+                else if (e.key.keysym.sym == SDLK_r)
+                {
+                    if (mouseHold)
+                    {
+                        mouseHold = false;
+                    }
+                    else
+                    {
+                        mouseHold = true;
+                    }
+                }
                 break;
                 
             case SDL_MOUSEBUTTONDOWN:
             {
-                int x, y;
-                SDL_GetMouseState(&x, &y);
-                cpVect pos = cpv(x, y);
-                Circle* newTempCircle = new Circle();
-                newTempCircle->initCircle(window.renderer);
-                cpShape newCircle = newTempCircle->createCircle(*radius, &space, pos);
-                circles->insert(circles->end(), *newTempCircle);
+                if (!mouseHold)
+                {
+                    int x, y;
+                    SDL_GetMouseState(&x, &y);
+                    cpVect pos = cpv(x, y);
+                    Circle* newTempCircle = new Circle();
+                    newTempCircle->initCircle(window.renderer);
+                    cpShape newCircle = newTempCircle->createCircle(*radius, &space, pos);
+                    circles->insert(circles->end(), *newTempCircle);
+                }
+                else
+                {
+                    mouseDown = true;
+                }
                 break;
             }
+            case SDL_MOUSEBUTTONUP:
+                mouseDown = false;
             default:
                 break;
             
                 
         }
+    }
+    
+    if(mouseDown)
+    {
+        int x, y;
+        SDL_GetMouseState(&x, &y);
+        cpVect pos = cpv(x, y);
+        Circle* newTempCircle = new Circle();
+        newTempCircle->initCircle(window.renderer);
+        cpShape newCircle = newTempCircle->createCircle(*radius, &space, pos);
+        circles->insert(circles->end(), *newTempCircle);
     }
 }
 

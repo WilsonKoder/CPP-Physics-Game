@@ -60,7 +60,7 @@ int main(int argc, const char * argv[]) {
         {
             cpShape* shape = circle.ballShape;
             cpBody* body = cpShapeGetBody(shape);
-            cpFloat angle = cpBodyGetAngle(body) * 40;
+            cpFloat angle = cpBodyGetAngle(body) * 30;
             cpVect rot = cpBodyGetRot(body);
             Circle::drawCircle(circle.getCirclePos(), angle, ballTexture, window.renderer);
         }
