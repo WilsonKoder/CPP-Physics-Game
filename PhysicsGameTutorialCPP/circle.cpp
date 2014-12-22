@@ -44,8 +44,11 @@ void Circle::drawCircle(cpVect pos, cpFloat rot, SDL_Texture* ballTexture, SDL_R
     SDL_Rect destRect;
     
     srcRect.x = srcRect.y = 0;
-    srcRect.w = destRect.w = 30;
-    srcRect.h = destRect.h = 30;
+    srcRect.w = 30;
+    srcRect.h = 30;
+    
+    destRect.w = 30;
+    destRect.h = 30;
     
     destRect.x = pos.x;
     destRect.y = pos.y;

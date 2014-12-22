@@ -9,7 +9,7 @@
 #include <SDL2/SDL.h>
 #include <iostream>
 
-void Input::handleEvents(Screen window, std::vector<Circle> *circles, cpSpace space, int *radius, int *gravity, int *wind)
+void Input::handleEvents(Screen window, std::vector<Circle> *circles, cpSpace space, int radius)
 {
     SDL_Event e;
     while(SDL_PollEvent(&e))
@@ -24,16 +24,6 @@ void Input::handleEvents(Screen window, std::vector<Circle> *circles, cpSpace sp
                 {
                     std::cout << "clear!" << std::endl;
                     std::cout << "could not clear, current clearing causes crash due to EXC_BAD_ACCESS." << std::endl;
-                }
-                else if(e.key.keysym.sym == SDLK_w)
-                {
-                    gravity -= 100;
-                    cpSpaceSetGravity(&space, cpv(*wind, *gravity));
-                }
-                else if(e.key.keysym.sym == SDLK_s)
-                {
-                    gravity += 100;
-                    cpSpaceSetGravity(&space, cpv(*wind, *gravity));
                 }
                 else if (e.key.keysym.sym == SDLK_r)
                 {
@@ -54,10 +44,12 @@ void Input::handleEvents(Screen window, std::vector<Circle> *circles, cpSpace sp
                 {
                     int x, y;
                     SDL_GetMouseState(&x, &y);
+                    x -= 15;
+                    y -= 15;
                     cpVect pos = cpv(x, y);
                     Circle* newTempCircle = new Circle();
                     newTempCircle->initCircle(window.renderer);
-                    cpShape newCircle = newTempCircle->createCircle(*radius, &space, pos);
+                    newTempCircle->createCircle(radius, &space, pos);
                     circles->insert(circles->end(), *newTempCircle);
                 }
                 else
@@ -82,7 +74,7 @@ void Input::handleEvents(Screen window, std::vector<Circle> *circles, cpSpace sp
         cpVect pos = cpv(x, y);
         Circle* newTempCircle = new Circle();
         newTempCircle->initCircle(window.renderer);
-        cpShape newCircle = newTempCircle->createCircle(*radius, &space, pos);
+        newTempCircle->createCircle(radius, &space, pos);
         circles->insert(circles->end(), *newTempCircle);
     }
 }

@@ -26,8 +26,6 @@ int main(int argc, const char * argv[]) {
     
     cpSpace space = physics.createPhysicsSpace();
     vector<Circle> circles;
-
-    SDL_Surface *screen = SDL_GetWindowSurface(window.window);
     
     SDL_SetRenderDrawColor(window.renderer, 255, 255, 255, 255);
     SDL_Texture* ballTexture = Circle::initCircle(window.renderer);
@@ -54,14 +52,13 @@ int main(int argc, const char * argv[]) {
     {
         SDL_RenderClear(window.renderer);
 
-        input.handleEvents(window, &circles, space, &rad, &gravity, &wind);
+        input.handleEvents(window, &circles, space, rad);
         
         for(auto &circle : circles)
         {
             cpShape* shape = circle.ballShape;
             cpBody* body = cpShapeGetBody(shape);
             cpFloat angle = cpBodyGetAngle(body) * 30;
-            cpVect rot = cpBodyGetRot(body);
             Circle::drawCircle(circle.getCirclePos(), angle, ballTexture, window.renderer);
         }
         
